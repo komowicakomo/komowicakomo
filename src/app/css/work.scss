@@ -1,0 +1,110 @@
+.work_nav_box
+{
+  width: 800px;
+  position: absolute;
+  left: 50% ;
+  top: 50%;
+  transform: translate(-50% , -50%);
+  @media (max-width: 800px){
+    max-width: calc(100% - 64px);
+  }
+  &:after{
+    content: "";
+    display: block;
+    padding-top: 75%;
+  }
+  .smaller_box{
+    float: left;
+    opacity: 0;
+    width: 50%;
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    cursor: pointer;
+    &:after{
+      content: "";
+      display: block;
+      padding-top: 75%;
+      position: relative;
+      z-index: 1;
+    }
+    .p_name
+    {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      top: 0;
+      opacity: 0;
+      background-color: white;
+      z-index: 3;
+      transition: 0.4s ease ;
+      & > span
+      {
+        font-weight: 800;
+        font-size: 24px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        color: #141516;
+        opacity: 0;
+        transform: translate(-50% , -10%);
+      }
+    }
+    &.unique
+    {
+      transform: translateX(50px);
+      opacity: 0;
+    }
+  }
+  a{
+    &:nth-child(1){
+      .smaller_box{
+        transform: translate(-50px , 0);
+        background-color: red;
+      }
+    }
+    &:nth-child(2){
+      .smaller_box{
+        transform: translate( 0 , -50px);
+        background-color: purple;
+      }
+    }
+    &:nth-child(3){
+      .smaller_box{
+        transform: translate( 0 , 50px);
+        background-color: yellow;
+      }
+    }
+    &:hover{
+      .p_name
+      {
+        opacity: 1;
+        span
+        {
+          transition: 0.6s ease 0.4s ;
+          opacity: 1;
+          transform: translate(-50% , -50%);
+        }
+      }
+    }
+  }
+  .word{
+    white-space: nowrap;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    color: #838B91;
+    font-size: 24px;
+    @media (max-width: 800px){
+      font-size: 14px;
+    }
+    span{
+      font-weight: 700;
+      color: white;
+    }
+  }
+}

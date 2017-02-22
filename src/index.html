@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Wikan Wicaksono | Frontend Developer</title>
+        <meta name="author" content="Wikan Wicaksono ,Portfolio">
+        <meta name="copyright" content="Wikan Wicaksono">
+        <meta name="creation_Date" content="01-01-2017">
+        <meta http-equiv="Content-Type" content="text/html; iso-8859-1">
+        <meta name="ROBOTS" content="INDEX, FOLLOW">
+        <meta name="description" content="Hello , I'm Wikan Wicaksono a Passionate Frontend Developer">
+
+        <!-- favicon-->
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/images/favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="/images/favicon/manifest.json">
+        <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="/images/favicon/favicon.ico">
+        <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+          <!-- fovicon -->
+
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans:400,700" rel="stylesheet">
+        <style type="text/css">
+        .loader {
+          background-color: white;
+          overflow: hidden;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 9;
+          will-change:transform;
+          transform: translateY(-100%);
+          transition: transform 0.4s cubic-bezier(.67,.22,.24,1.17) 0.4s ;
+        }
+        .loader::after{
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 2;
+          will-change:transform;
+          transform: translateY(-100%);
+          background-color: #141516;
+          transition: transform 0.4s cubic-bezier(.67,.22,.24,1.17) ;
+        }
+        .loader .inner {
+          position: absolute;
+          z-index: 3;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50% , -50% );
+          overflow: hidden;
+          padding-bottom: 10px;
+        }
+        .loader .inner::after{
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background-color: white;
+          animation-name: example;
+          animation-duration: 1s;
+          animation-direction: reverse;
+          animation-iteration-count: infinite;
+          animation-timing-function: ease;
+        }
+        @keyframes example {
+          from {
+            transform: translateX(100%);
+          } to {
+            transform: translateX(-100%);
+          }
+        }
+        .loader.active
+        {
+          transform: translate(0);
+          transition: transform 0.4s ease  ;
+        }
+        .loader.active::after
+        {
+          z-index: 2;
+          transform: translate(0);
+          transition: transform 0.4s ease 0.4s ;
+        }
+        .loader.hide
+        {
+          display: none;
+        }
+        </style>
+    </head>
+    <body id="body">
+      <div id="app" class="winheight" role="main"></div>
+      <div id="loader" class="loader active" role="loader">
+        <div class="inner">
+          <svg width="64px" height="36px" viewBox="0 0 80 46" version="1.1">
+              <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                  <g id="logo" transform="translate(-600.000000, -337.000000)" fill="#FFFFFF">
+                      <g id="inner-logo" transform="translate(600.000000, 337.000000)">
+                          <path d="M28.3966121,33.1373561 L12.4610592,0.498442368 L0,0.498442368 L21.9022586,45.3582555 L28.3966121,45.3582555 L22.4299065,45.3582555 L28.3966121,33.1373561 Z M39.9853972,9.40141443 L35.6386293,0.498442368 L23.1775701,0.498442368 L33.7548676,22.1626734 L39.9853972,9.40141443 Z M46.2159268,22.1626734 L57.5408879,45.3582555 L45.0798287,45.3582555 L39.9853972,34.9239323 L46.2159268,22.1626734 Z" id="Combined-Shape"></path>
+                          <polygon id="Rectangle-3" points="35.617942 45.0848985 57.3531091 0.77179931 55.9377434 0.77179931 34.3310809 45.0848985"></polygon>
+                          <polygon id="Rectangle-3" points="57.9154498 45.0848985 79.7830156 0.77179931 78.6632461 0.225085425 56.7609875 45.0848985"></polygon>
+                      </g>
+                  </g>
+              </g>
+          </svg>
+        </div>
+      </div>
+      <script src="/app/bundle.js"></script>
+    </body>
+</html>

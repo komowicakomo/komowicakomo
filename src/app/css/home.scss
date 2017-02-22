@@ -1,0 +1,39 @@
+.home{
+  position: relative;
+  width: 100%;
+  .text{
+    position: absolute;
+    bottom: 128px;
+    right: 128px;
+    max-width: 720px;
+    text-align: right;
+    transform-origin: left;
+    will-change: transform;
+    transform: scaleX(0);
+    transition: transform 0.4s cubic-bezier(.67,.22,.24,1.17)  ;
+    @media (max-width: 800px){
+      right: 32px;
+      bottom: 96px;
+      max-width: calc(100% - 64px);
+      h1 {
+        font-size: 24px;
+      }
+    }
+    h1{
+      line-height: 1.25em;
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: white;
+      transform: scaleX(1);
+      transform-origin: right;
+      transition: transform 0.4s cubic-bezier(.67,.22,.24,1.17) ;
+    }
+  }
+}
