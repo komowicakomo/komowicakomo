@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm run build",
     "build": "webpack -d && webpack-dev-server --content-base src/ --inline --hot --port 8081 --host 0.0.0.0 --history-api-fallback",
-    "postinstall":"node_modules/.bin/webpack -p",
+    "postinstall":"webpack -p",
     "start":"node server.js"
   },
   "repository": {
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/komowicakomo/komowicakomo#readme",
   "dependencies": {
+    "express": "4.13.3",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-router": "^3.0.2"
